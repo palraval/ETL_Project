@@ -5,7 +5,7 @@ Summary: For the ETL project, we worked with our project partners Chris Kilkes, 
 This project is divided into the following subsections:
 
 
-**1. Create the Category DataFrame**
+## **1. Create the Category DataFrame**
 
 The "crowdfunding.xlsx" Excel data is extracted and transformed to create a category DataFrame. 
 
@@ -18,7 +18,7 @@ A "category" column that contains only the unique category titles from the data 
 This category DataFrame is exported as "category.csv" under the "Resources" folder to be used later. 
 
 
-**2. Create the Subcategory DataFrame** 
+## **2. Create the Subcategory DataFrame** 
 
 The "crowdfunding.xlsx" Excel data to create a subcategory DataFrame that has the following columns:
 
@@ -29,7 +29,7 @@ A "subcategory" column that contains only the unique subcategory titles from the
 This subcategory DataFrame is exported as a file called "subcategory.csv" in the "Resources" folder. 
 
 
-**3. Create the Campaign DataFrame** 
+## **3. Create the Campaign DataFrame** 
 
 The "crowdfunding.xlsx" Excel data is used to create a campaign DataFrame with the following columns:**
 
@@ -64,7 +64,7 @@ The "subcategory_id" column
 This campaign DataFrame is exported as "campaign.csv" under the "Resources" folder. 
 
 
-**4. Create the Contacts DataFrame**
+## **4. Create the Contacts DataFrame**
 
 Python dictionary methods are used on the "contacts.xlsx" Excel data to create a contacts DataFrame with the following columns:
 
@@ -80,7 +80,7 @@ The "email" column
 This contacts DataFrame is exported as "contacts.csv" in the "Resources" folder.
 
 
-**5. Create an ERD to properly see relationships between the four data files**
+## **5. Create an ERD to properly see relationships between the four data files**
 
 Entity  Relationship Diagram summary:
 We inspected the four CSV files output in the preceding query building/running phases and drafted an Entity Relationship Diagram indicating the positioning of the four tables and their connection points. Specifically the four tables are:
@@ -96,7 +96,7 @@ How do the various tables connect? As outlined in the Entity Relationship Diagra
 
 
 
-**6. Use PostgresSQL to create four tables that will each import one of the created DataFrames.** 
+## **6. Use PostgresSQL to create four tables that will each import one of the created DataFrames.** 
 
 
 The final stage involves using the four data files that were constructed in the Jupyter Notebook to be transcribed in SQL. For this purpose, four tables are created in SQL to accurately import the data from the four files. 
