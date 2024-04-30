@@ -73,3 +73,20 @@ The following image shows the exported campaign DataFrame:
 
 Export the DataFrame as "contacts.csv" in the "Resources" folder.
 
+# Create the Crowdfunding Database
+Instructions:
+- Inspect the four CSV files, and then sketch an ERD of the tables by using QuickDBDLinks to an external site..
+-Use the information from the ERD to create a table schema for each CSV file.
+- Note: Remember to specify the data types, primary keys, foreign keys, and other constraints.
+
+Entity  Relationship Diagram summary:
+We inspected the four CSV files output in the preceding query building/running phases and drafted an Entity Relationship Diagram indicating the positioning of the four tables and their connection points. Specifically the four tables are:
+- Contacts: A table containing the fundraiser contacts listing Contact ID (the primary key for this table), First Name (a Varchar field), Last Name (a Varchar field), and Email Address (a Varchar field).
+- Campaign: A table that sits at the center of the database holding as it does the bulk of the various fundraiser data fields, specifically: Category ID (one of the table's Foreign Keys), Sub-Category ID (Foreign Key), Contact ID (Foreign Key), CF ID (the table's Primary Key), Company Name, Fundraiser Description, Goal, Pledged, Outcome, Backers Count, Country, Currency, Launch Date and Start Date fields.
+- Category: A table that holds the Category ID (the table's Primary Key) and Category data field in the database.
+- Sub-Category: A table that holds the Sub-Category ID (the table's Primary Key) and Sub-Category data field in the database.
+
+How do the various tables connect? As outlined in the Entity Relationship Diagram, the Campaign table sits at the center of the database and is connected to the various tables as follows:
+- Contacts table connects to the Campaign table via its Primary Key, the Contact ID, which is one of the Foreign Keys for the Campaign table. Because there can be multiple contacts per fundraiser and multiple fundraisers to any which contact can be associated, this relationship is considered bi-directional and many-to-many on both sides.
+- Category table connects to the Campaign table via its Primary Key, the Category ID, which is one of the Foreign Keys for the Campaign table. Because there can only be one Category ID per project but there can be multiple Campaigns this relationship is considered uni-directional (from Category to Campaign) and one-to-many (from Category to Campaign).
+- Sub-Category table connects to the Campaign table via its Primary Key, the Sub-Category ID, which is a Foreign Key for the Campaign table. Because there can only be one Sub-Category ID per project but there can be multiple Campaigns this relationship is considered uni-directional (from Sub-Category to Campaign) and one-to-many (from Sub-Category to Campaign).
